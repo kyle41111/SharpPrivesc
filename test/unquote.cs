@@ -2,7 +2,12 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Win32;
 using System.ServiceProcess;
-
+using System;
+using Microsoft.Win32;
+using System.ServiceProcess;
+using System.ServiceProcess;
+using System.Diagnostics;
+using System.Threading;
 
 
 
@@ -16,25 +21,33 @@ namespace Privesc.Commands
 public void Execute(Dictionary<string, string> arguments)
         {
 
-            Console.WriteLine("Potential Unquoted Service Path: \n");
 
-            ServiceController[] scs = ServiceController.GetServices();
+                    Console.WriteLine("Potential Unquoted Service Path: \n");
 
-
-            foreach (ServiceController s in scs)
-            {
-                RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\" + s.ServiceName);
-
-                string path = key.GetValue("ImagePath").ToString();
+                    ServiceController[] scs = ServiceController.GetServices();
 
 
-                if (path[0] != '"' && !path.Contains("System32") && !path.Contains("system32"))
-                Console.WriteLine(s.ServiceName);
-                Console.WriteLine(path);
+                    foreach (ServiceController s in scs)
+                    {
+                        RegistryKey rkey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\" + s.ServiceName);
+
+                        string path = rkey.GetValue("ImagePath").ToString();
+
+
+
+                        if (path[0] != '"' && !path.Contains("system32") && !path.Contains("System32"))
+                        {
+                            Console.WriteLine(s.ServiceName);
+                            Console.WriteLine(path);
+
+                        }
+                    }
+                    
+
+                }
+
             }
-            //Console.ReadKey();
 
         }
+    
 
-    }
-}
