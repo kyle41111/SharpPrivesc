@@ -12,9 +12,14 @@ Nested Groups
 
 
 Unquoted Service Paths:
-![image](https://user-images.githubusercontent.com/26053422/217351847-fb469311-1d61-4608-858a-283b01c4be53.png)
+
+
+![unquoted](https://user-images.githubusercontent.com/26053422/217352497-a43608c1-98ac-4f82-a506-4a96d63d01d9.png)
+
 
 DCsync:
-![image](https://user-images.githubusercontent.com/26053422/217352313-8cb56b70-ef37-4416-a8d8-3f07747532d6.png)
+
+
+![dcsync](https://user-images.githubusercontent.com/26053422/217352438-0c10d521-69d7-4967-a516-176e9bf066d0.png)
 
 
