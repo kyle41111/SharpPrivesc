@@ -1,6 +1,6 @@
 # SharpPrivesc
-Practicing C# and bringing multiple things together for one program. Still noob stuff. Privesc checks and the like.
-I preferred Spectreops command line parsing classes so decided to utilize theres over other .net packages.
+Practicing C# and bringing Privesc attack surfaces together. Still noob stuff. Privesc checks and the like.
+I preferred Spectreops command line parsing classes so decided to utilize theirs over other .net packages like command line parser etc.
 
 To-Do:
 Menu
